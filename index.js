@@ -189,6 +189,7 @@ SonyTV.prototype.updateStatus = function() {
       that.getChannelUris(0);
       if(that.listapplications) that.listApplications();
     }
+    that._service.getCharacteristic(Characteristic.On).updateValue(that.power);
     that.updateStatus();
   }, this.updaterate);
 }
